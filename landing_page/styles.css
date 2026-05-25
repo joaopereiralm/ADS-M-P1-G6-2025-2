@@ -21,6 +21,30 @@ body {
 
 html {
     scroll-behavior: smooth; /* Faz a rolagem ser suave */
+    scrollbar-width: auto;
+}
+
+/* -------------------- SCROLLBAR -------------------- */
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+/* 2. O fundo da barra (Track) */
+::-webkit-scrollbar-track {
+    background: #0d1729;
+}
+
+/* 3. O "bastão" que se move (Thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #ff6b00; /* O laranja vibrante do seu botão "Faça Parte" */
+    border-radius: 6px;       /* Deixa o bastão com as pontas arredondadas */
+    border: 3px solid var(--primary-blue); /* Cria um espaçamento elegante usando a cor de fundo */
+}
+
+/* 4. Efeito ao passar o mouse na barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #e05e00; /* Um laranja levemente mais escuro ao passar o mouse */
 }
 
 /* -------------------- CAROUSEL -------------------- */
@@ -102,7 +126,7 @@ html {
   .nav-dot.active {
     background: #ff8c00; /* Preenche a bolinha ativa */
   }
-
+  
 /* -------------------- CABEÇALHO -------------------- */
 .header {
     background-color: var(--primary-blue);
