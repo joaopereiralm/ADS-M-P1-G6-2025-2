@@ -269,6 +269,12 @@ html {
     min-width: 250px;
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .stat-icon {
@@ -311,8 +317,16 @@ html {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.08);
     text-align: left;
+    /* Adicionando transições para hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvv-card:hover {
+    /* Animação ao passar o mouse por cima */
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); 
 }
 
 .mvv-title {
@@ -366,6 +380,7 @@ html {
     display: flex;
     justify-content: center;
     gap: 40px;
+    align-items: stretch;
 }
 
 .escolha-card {
@@ -378,6 +393,10 @@ html {
     max-width: 400px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente títulos, textos e botões */
+    text-align: center;
 }
 
 .escolha-card:hover {
@@ -388,6 +407,10 @@ html {
     font-size: 1.8em;
     color: var(--cta-orange);
     margin-bottom: 15px;
+    min-height: 2.4em; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .escolha-card p {
@@ -395,6 +418,9 @@ html {
     margin-bottom: 25px;
     line-height: 1.6;
     flex-grow: 1;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.6;
 }
 
 .btn-escolha {
