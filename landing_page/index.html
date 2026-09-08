@@ -18,6 +18,7 @@
             <nav class="nav-menu">
                 <a href="#inicio" class="nav-link">Inicio</a>
                 <a href="#missao" class="nav-link">Missão & Valores</a>
+                <a href="#galeria" class="nav-link">Galeria</a>
                 <a href="#inscricao" class="nav-link">Voluntários & Patrocinadores</a>
             </nav> 
         </div>
@@ -34,12 +35,11 @@
         </div>
         
         <div class="carousel-container">
-                <div class="carousel-track">
-                <!-- Solicitar as fotos ao Aldo, e colocar nessa Div do carousel -->
-                <img src="https://picsum.photos/800/400?random=1" alt="Imagem 1" class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=2" alt="Imagem 2" class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=3" alt="Imagem 3" class="carousel-slide">
-                <img src="https://picsum.photos/800/400?random=4" alt="Imagem 4" class="carousel-slide">
+            <div class="carousel-track">
+                <iframe class="carousel-slide instagram-embed" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/Da6U0GAPgLz/embed/" loading="lazy"></iframe>
+                <iframe class="carousel-slide instagram-embed" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DYiPPpzPpkz/embed/" loading="lazy"></iframe>
+                <iframe class="carousel-slide instagram-embed" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/p/DSpsZ3FAMVQ/embed/" loading="lazy"></iframe>
+                <iframe class="carousel-slide instagram-embed" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DK-dIwGvRP4/embed/" loading="lazy"></iframe>
             </div>
             
             <div class="button-carousel">
@@ -110,43 +110,75 @@
             </div>
         </div>
     </section>
+
+    <section id="galeria" class="gallery-section">
+        <h2 class="section-title">Galeria VidAtiva</h2>
+        <p class="gallery-subtitle">Momentos de inclusão, esporte e superação compartilhados pelo Instituto.</p>
+
+        <div class="gallery-grid">
+            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/Da6U0GAPgLz/embed/" loading="lazy"></iframe>
+            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DYiPPpzPpkz/embed/" loading="lazy"></iframe>
+            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/p/DSpsZ3FAMVQ/embed/" loading="lazy"></iframe>
+            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DK-dIwGvRP4/embed/" loading="lazy"></iframe>
+            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DKncbaRyTL5/embed/" loading="lazy"></iframe>
+            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DSGkSNdjZoG/embed/" loading="lazy"></iframe>
+        </div>
+
+        <a class="gallery-link cta-button" href="https://www.instagram.com/institutovidativa/" target="_blank" rel="noopener noreferrer">Ver todas no Instagram</a>
+    </section>
     
     <section id="inscricao" class="inscricao-section">
         <h2 class="inscricao-title">Escolha como Você Vai Fazer a Diferença</h2>
-        <p class="inscricao-subtitle">Seu papel é vital. Fale conosco no WhatsApp para darmos o próximo passo juntos.</p>
+        <p class="inscricao-subtitle">Seu papel é vital. Preencha o formulário e entraremos em contato.</p>
         
-        <div class="escolha-container">
-            
-            <div class="escolha-card patrocinador-card">
-                <h3>Patrocinador ou Investidor</h3>
-                <p>Associe sua marca à superação e explore os benefícios da Lei de Incentivo ao Esporte. Clique e solicite a proposta de patrocínio.</p>
+        <!-- Substitua SEU_EMAIL_AQUI pelo e-mail que receberá os contatos. -->
+        <form class="contact-form" action="https://formsubmit.co/joaopaulodealmeidapereira1@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Novo contato pelo site do Instituto VidAtiva">
+            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
 
-                <!-- Trocar link com Aldo para alteração -->
-                <a href="https://wa.me/55DDDNÚMERO?text=Olá,%20tenho%20interesse%20em%20patrocinar%20o%20projeto%20Basquete%20Sobre%20Rodas.%20Gostaria%20de%20receber%20a%20proposta." 
-                   class="btn-escolha cta-button" 
-                   target="_blank">
-                   Quero Patrocinar
-                </a>
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" name="nome" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">E-mail</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </div>
             </div>
-            
-            <div class="escolha-card voluntario-card">
-                <h3>Voluntário VidAtiva</h3>
-                <p>Doe seu tempo e talento, seja na quadra, na logística ou no marketing. Fale conosco para conhecer as áreas que precisam de ajuda!</p>
-                
-                <!-- Trocar link com Aldo para alteração -->
-                <a href="https://wa.me/55DDDNÚMERO?text=Olá,%20gostaria%20de%20ser%20voluntário(a)%20no%20Instituto%20VidAtiva.%20Quais%20são%20as%20vagas%20abertas?" 
-                   class="btn-escolha cta-button" 
-                   target="_blank">
-                   Quero Ser Voluntário
-                </a>    
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="telefone">Telefone</label>
+                    <input id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="interesse">Como deseja ajudar?</label>
+                    <select id="interesse" name="interesse" required>
+                        <option value="" selected disabled>Selecione uma opção</option>
+                        <option value="Patrocínio ou investimento">Patrocínio ou investimento</option>
+                        <option value="Voluntariado">Voluntariado</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
             </div>
-        </div>
+
+            <div class="form-field">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            </div>
+
+            <button class="btn-escolha" type="submit">Enviar formulário</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
     </section>
 
     <footer class="footer">
         <p>&copy; 2025 Instituto VidAtiva. Todos os direitos reservados.</p>
         <p> Desenvolvido para Projeto de Faculdade.</p>
     </footer>
-    
+    <script src="contact-form.js"></script>
 </body>
 </html>
