@@ -21,25 +21,28 @@
                 <a href="#galeria" class="nav-link">Galeria</a>
                 <a href="#inscricao" class="nav-link">Voluntários & Patrocinadores</a>
             </nav> 
+            <a href="#doar-pix" class="header-pix-btn">
+                <span class="header-pix-icon">💠</span>
+                Doar via Pix
+            </a>
         </div>
     </header>
 
 
-    <section class="hero-section">
-        <section id="inicio">
-            <div class="hero-content">
-                    <h1 class="hero-title">Não Damos Acesso.<br>Damos Impulso.</h1>
-                        <p class="hero-subtitle">Seja Patrocinador ou Voluntário do Basquete Sobre Rodas do Instituto VidAtiva.</p>
-                        <a href="#inscricao" class="cta-button">FAÇA PARTE DO NOSSO JOGO!</a>
-            </section>
+    <section class="hero-section" id="inicio">
+        <div class="hero-content">
+            <h1 class="hero-title">Não Damos Acesso.<br>Damos Impulso.</h1>
+            <p class="hero-subtitle">Seja Patrocinador ou Voluntário do Basquete Sobre Rodas do Instituto VidAtiva.</p>
+            <a href="#inscricao" class="cta-button">FAÇA PARTE DO NOSSO JOGO!</a>
         </div>
-        
+
         <div class="carousel-container">
-            <div class="carousel-track">
-                <iframe class="carousel-slide instagram-embed" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/Da6U0GAPgLz/embed/" loading="lazy"></iframe>
-                <iframe class="carousel-slide instagram-embed" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DYiPPpzPpkz/embed/" loading="lazy"></iframe>
-                <iframe class="carousel-slide instagram-embed" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/p/DSpsZ3FAMVQ/embed/" loading="lazy"></iframe>
-                <iframe class="carousel-slide instagram-embed" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DK-dIwGvRP4/embed/" loading="lazy"></iframe>
+                <div class="carousel-track">
+                <!-- Solicitar as fotos ao Aldo, e colocar nessa Div do carousel -->
+                <img src="/images/imagem1.png" alt="Imagem 1" class="carousel-slide">
+                <img src="/images/imagem2.png" alt="Imagem 2" class="carousel-slide">
+                <img src="/images/imagem3.png" alt="Imagem 3" class="carousel-slide">
+                <img src="imagem4.jpg" alt="Imagem 4" class="carousel-slide">
             </div>
             
             <div class="button-carousel">
@@ -64,7 +67,7 @@
             
             <div class="stat-box">
                 <div class="stat-icon">🏀</div> 
-                <p class="stat-number "5 data-target="5">+5</p>
+                <p class="stat-number" data-target="5">+5</p>
                 <p class="stat-description">Anos de Atuação</p>
             </div>
 
@@ -110,69 +113,110 @@
             </div>
         </div>
     </section>
+    
+    <!-- Seção de Inscrição -->
+    <section id="inscricao" class="inscricao-section">
+        <h2 class="inscricao-title">Escolha como Você Vai Fazer a Diferença</h2>
+        <p class="inscricao-subtitle">Seu papel é vital. Preencha o formulário e entraremos em contato.</p>
+
+        <div class="inscricao-grid">
+            <!-- Formulário enviado ao e-mail configurado no atributo action. -->
+            <form class="contact-form" action="https://formsubmit.co/joaopaulodealmeidapereira1@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Novo contato pelo site do Instituto VidAtiva">
+                <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="nome">Nome completo</label>
+                        <input id="nome" name="nome" type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="telefone">Telefone</label>
+                        <input id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="interesse">Como deseja ajudar?</label>
+                        <select id="interesse" name="interesse" required>
+                            <option value="" selected disabled>Selecione uma opção</option>
+                            <option value="Patrocínio ou investimento">Parceiro</option>
+                            <option value="Voluntariado">Voluntário</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+
+                <button class="btn-escolha" type="submit">Enviar formulário</button>
+                <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+
+            <!-- Card de doação via Pix. PROTÓTIPO: substituir a .pix-qr-placeholder pela imagem real do QR Code assim que estiver disponível. -->
+            <aside class="pix-card" id="doar-pix" aria-label="Doação via Pix">
+                <span class="pix-badge">Doação rápida</span>
+                <h3 class="pix-title">Doe agora via Pix</h3>
+                <p class="pix-text">Sua contribuição financia cadeiras, uniformes e viagens para campeonatos. Aponte a câmera do seu banco para o código abaixo.</p>
+
+                <div class="pix-qr-placeholder" role="img" aria-label="Espaço reservado para o QR Code do Pix, ainda não disponível">
+                    <svg viewBox="0 0 100 100" class="pix-qr-icon" aria-hidden="true">
+                        <rect x="8" y="8" width="28" height="28" rx="3"></rect>
+                        <rect x="16" y="16" width="12" height="12" rx="1" class="pix-qr-hole"></rect>
+                        <rect x="64" y="8" width="28" height="28" rx="3"></rect>
+                        <rect x="72" y="16" width="12" height="12" rx="1" class="pix-qr-hole"></rect>
+                        <rect x="8" y="64" width="28" height="28" rx="3"></rect>
+                        <rect x="16" y="72" width="12" height="12" rx="1" class="pix-qr-hole"></rect>
+                        <rect x="46" y="8" width="8" height="8"></rect>
+                        <rect x="46" y="46" width="8" height="8"></rect>
+                        <rect x="64" y="46" width="8" height="8"></rect>
+                        <rect x="80" y="46" width="8" height="8"></rect>
+                        <rect x="46" y="64" width="8" height="8"></rect>
+                        <rect x="46" y="80" width="8" height="8"></rect>
+                        <rect x="64" y="80" width="8" height="8"></rect>
+                        <rect x="80" y="64" width="8" height="8"></rect>
+                    </svg>
+                    <span class="pix-qr-caption">QR Code em breve</span>
+                </div>
+
+                <div class="pix-key-row">
+                    <div class="pix-key-field">
+                        <span class="pix-key-label">Chave Pix (CNPJ)</span>
+                        <span class="pix-key-value" id="pix-key">00.000.000/0001-00</span>
+                    </div>
+                    <button type="button" class="pix-copy-btn" id="pix-copy-btn" data-copy-target="pix-key">Copiar chave</button>
+                </div>
+
+                <p class="pix-footnote">Protótipo — QR Code e chave real serão inseridos após confirmação com o Instituto.</p>
+            </aside>
+        </div>
+    </section>
 
     <section id="galeria" class="gallery-section">
+        <p class="section-eyebrow">Nossa energia em quadra</p>
         <h2 class="section-title">Galeria VidAtiva</h2>
         <p class="gallery-subtitle">Momentos de inclusão, esporte e superação compartilhados pelo Instituto.</p>
 
         <div class="gallery-grid">
-            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/Da6U0GAPgLz/embed/" loading="lazy"></iframe>
-            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DYiPPpzPpkz/embed/" loading="lazy"></iframe>
-            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/p/DSpsZ3FAMVQ/embed/" loading="lazy"></iframe>
-            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DK-dIwGvRP4/embed/" loading="lazy"></iframe>
-            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DKncbaRyTL5/embed/" loading="lazy"></iframe>
-            <iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DSGkSNdjZoG/embed/" loading="lazy"></iframe>
+            <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/Da6U0GAPgLz/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/reel/Da6U0GAPgLz/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
+            <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DYiPPpzPpkz/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/reel/DYiPPpzPpkz/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
+            <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/p/DSpsZ3FAMVQ/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/p/DSpsZ3FAMVQ/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
+            <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DK-dIwGvRP4/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/reel/DK-dIwGvRP4/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
+            <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DKncbaRyTL5/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/reel/DKncbaRyTL5/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
+            <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DSGkSNdjZoG/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/reel/DSGkSNdjZoG/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
         </div>
 
         <a class="gallery-link cta-button" href="https://www.instagram.com/institutovidativa/" target="_blank" rel="noopener noreferrer">Ver todas no Instagram</a>
-    </section>
-    
-    <section id="inscricao" class="inscricao-section">
-        <h2 class="inscricao-title">Escolha como Você Vai Fazer a Diferença</h2>
-        <p class="inscricao-subtitle">Seu papel é vital. Preencha o formulário e entraremos em contato.</p>
-        
-        <!-- Substitua SEU_EMAIL_AQUI pelo e-mail que receberá os contatos. -->
-        <form class="contact-form" action="https://formsubmit.co/joaopaulodealmeidapereira1@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Novo contato pelo site do Instituto VidAtiva">
-            <input type="text" name="_honey" class="form-honeypot" tabindex="-1" autocomplete="off">
-
-            <div class="form-row">
-                <div class="form-field">
-                    <label for="nome">Nome completo</label>
-                    <input id="nome" name="nome" type="text" autocomplete="name" required>
-                </div>
-
-                <div class="form-field">
-                    <label for="email">E-mail</label>
-                    <input id="email" name="email" type="email" autocomplete="email" required>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-field">
-                    <label for="telefone">Telefone</label>
-                    <input id="telefone" name="telefone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
-                </div>
-
-                <div class="form-field">
-                    <label for="interesse">Como deseja ajudar?</label>
-                    <select id="interesse" name="interesse" required>
-                        <option value="" selected disabled>Selecione uma opção</option>
-                        <option value="Patrocínio ou investimento">Patrocínio ou investimento</option>
-                        <option value="Voluntariado">Voluntariado</option>
-                        <option value="Outro">Outro</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-field">
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            </div>
-
-            <button class="btn-escolha" type="submit">Enviar formulário</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
     </section>
 
     <footer class="footer">

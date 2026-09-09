@@ -26,7 +26,7 @@ const moveToSlide = (index) => {
   dots[currentIndex].classList.add('active');
 };
 
-// Configura a troca automática a cada 3 segundos
+// Configura a troca automática a cada 5 segundos
 const startAutoPlay = () => {
   autoPlayTimer = setInterval(() => {
     moveToSlide(currentIndex + 1);
@@ -57,6 +57,9 @@ dots.forEach((dot, index) => {
     resetAutoPlay();
   });
 });
+ 
+track.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+track.addEventListener('mouseleave', startAutoPlay);
 
 // Inicia o carrossel automático assim que a página carrega
 startAutoPlay();
