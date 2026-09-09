@@ -21,43 +21,24 @@
                 <a href="#galeria" class="nav-link">Galeria</a>
                 <a href="#inscricao" class="nav-link">Voluntários & Patrocinadores</a>
             </nav> 
-            <a href="#doar-pix" class="header-pix-btn">
-                <span class="header-pix-icon">💠</span>
-                Doar via Pix
-            </a>
         </div>
     </header>
 
 
     <section class="hero-section" id="inicio">
+        <!-- Fotos de fundo com crossfade automático e opacidade baixa. Solicitar as fotos ao Aldo. -->
+        <div class="hero-bg">
+            <img src="/images/imagem1.png" alt="" class="hero-bg-slide is-active">
+            <img src="/images/imagem2.png" alt="" class="hero-bg-slide">
+        </div>
+
         <div class="hero-content">
             <h1 class="hero-title">Não Damos Acesso.<br>Damos Impulso.</h1>
             <p class="hero-subtitle">Seja Patrocinador ou Voluntário do Basquete Sobre Rodas do Instituto VidAtiva.</p>
             <a href="#inscricao" class="cta-button">FAÇA PARTE DO NOSSO JOGO!</a>
         </div>
 
-        <div class="carousel-container">
-                <div class="carousel-track">
-                <!-- Solicitar as fotos ao Aldo, e colocar nessa Div do carousel -->
-                <img src="/images/imagem1.png" alt="Imagem 1" class="carousel-slide">
-                <img src="/images/imagem2.png" alt="Imagem 2" class="carousel-slide">
-                <img src="/images/imagem3.png" alt="Imagem 3" class="carousel-slide">
-                <img src="imagem4.jpg" alt="Imagem 4" class="carousel-slide">
-            </div>
-            
-            <div class="button-carousel">
-                <button class="carousel-btn prev-btn">&#10094;</button>
-                <button class="carousel-btn next-btn">&#10095;</button>
-            </div>    
-        
-            <div class="carousel-nav">
-                <button class="nav-dot active" data-index="0"></button>
-                <button class="nav-dot" data-index="1"></button>
-                <button class="nav-dot" data-index="2"></button>
-                <button class="nav-dot" data-index="3"></button>
-            </div>
-        </div>
-        <script src="carousel.js"></script>    
+        <script src="hero-bg.js"></script>
     </section>
 
     <section class="stats-section">
@@ -87,33 +68,171 @@
         </div>
     </section>
 
-    <section class="mvv-section">
-        <div class="mvv-container">
+ <div class="mvv-header" id="missao">
+        <span>QUEM SOMOS</span>
+        <h2>Missão, Visão & Valores</h2>
+    </div>
 
-            <section id="missao">
-                <div class="mvv-card">
-                <h3 class="mvv-title">🎯 Nossa Missão</h3>
-                <p>Promover a inclusão social, a reabilitação física e o desenvolvimento de alta performance de Pessoas com Deficiência (PCDs) através da prática do Basquete em Cadeira de Rodas.</p>
-            </div>
-            </section>
-            
-            <div class="mvv-card">
-                <h3 class="mvv-title">🔭 Nossa Visão (Objetivo)</h3>
-                <p>Ser reconhecido como um polo de excelência no esporte paralímpico brasileiro, ampliando nosso alcance para impactar mais vidas e ser a principal plataforma de revelação de talentos.</p>
+    <div class="mvv-container">
+
+        <!-- MISSÃO -->
+        <div class="mvv-card">
+
+            <div class="mvv-card-top">
+                <div class="mvv-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <circle cx="12" cy="12" r="1.5"></circle>
+                    </svg>
+                </div>
             </div>
 
-            <div class="mvv-card values-card">
-                <h3 class="mvv-title">🤝 Nossos Valores</h3>
-                <ul>
-                    <li><strong>⚡ Superação:</strong> Incentivamos a busca contínua por resultados, dentro e fora das quadras.</li>
-                    <li><strong>🤝 Inclusão Genuína:</strong> Promovemos um ambiente de igualdade e respeito.</li>
-                    <li><strong>✨ Transformação:</strong> Focamos no processo de reabilitação e melhoria da autoestima.</li>
-                    <li><strong>⚖️ Transparência:</strong> Garantimos a prestação de contas de todos os recursos.</li>
-                </ul>
+            <h3>Nossa Missão</h3>
+
+            <p>
+                Promover a inclusão social, a reabilitação física e o
+                desenvolvimento de alta performance de Pessoas com
+                Deficiência (PCDs) através da prática do Basquete em
+                Cadeira de Rodas.
+            </p>
+
+            <div class="mvv-line"></div>
+
+        </div>
+
+
+        <!-- VISÃO -->
+        <div class="mvv-card">
+
+            <div class="mvv-card-top">
+                <div class="mvv-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 12h18"></path>
+                        <path d="M5 12l7-5 7 5-7 5-7-5z"></path>
+                        <path d="M12 17v4"></path>
+                        <path d="M9 21h6"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <h3>Nossa Visão</h3>
+
+            <p>
+                Ser reconhecido como um polo de excelência no esporte
+                paralímpico brasileiro, ampliando nosso alcance para
+                impactar mais vidas e ser a principal plataforma de
+                revelação de talentos.
+            </p>
+
+            <div class="mvv-line"></div>
+
+        </div>
+
+
+        <!-- VALORES -->
+        <div class="values-container"> 
+
+            <div class="values-title">
+
+                <div class="values-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8 12l3 3 5-6"></path>
+                        <path d="M3 8l5-4 4 3 4-3 5 4"></path>
+                        <path d="M3 8v7l5 5 4-3 4 3 5-5V8"></path>
+                    </svg>
+                </div>
+
+                <div>
+                    <h3>Nossos Valores</h3>
+                </div>
+
+            </div>
+
+
+            <div class="values-grid">
+
+                <!-- 01 -->
+                <div class="value-card">
+
+                    <div class="value-icon-small">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M13 2L4 14h7l-1 8 10-13h-7z"></path>
+                        </svg>
+                    </div>
+
+                    <h4>Superação</h4>
+
+                    <p>
+                        Incentivamos a busca contínua por resultados,
+                        dentro e fora das quadras.
+                    </p>
+
+                </div>
+
+                <!-- 02 -->
+                <div class="value-card">
+
+                    <div class="value-icon-small">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 21s-7-4.5-7-10V5l7-3 7 3v6c0 5.5-7 10-7 10z"></path>
+                            <path d="M8 12l2.5 2.5L16 9"></path>
+                        </svg>
+                    </div>
+
+                    <h4>Inclusão Genuína</h4>
+                    <p>
+                        Promovemos um ambiente de igualdade e respeito.
+                    </p>
+                </div>
+
+                <!-- 03 -->
+                <div class="value-card">
+
+                    <div class="value-icon-small">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2v20"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="M5 5l3 3"></path>
+                            <path d="M16 16l3 3"></path>
+                            <path d="M19 5l-3 3"></path>
+                            <path d="M8 16l-3 3"></path>
+                        </svg>
+                    </div>
+
+                    <h4>Transformação</h4>
+
+                    <p>
+                        Focamos no processo de reabilitação e melhoria
+                        da autoestima.
+                    </p>
+
+                </div>
+
+                <!-- 04 -->
+                <div class="value-card">
+
+                    <div class="value-icon-small">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 5h16"></path>
+                            <path d="M6 5l-2 12h4L6 5z"></path>
+                            <path d="M18 5l-2 12h4L18 5z"></path>
+                            <path d="M12 5v15"></path>
+                            <path d="M9 20h6"></path>
+                        </svg>
+                    </div>
+
+                    <h4>Transparência</h4>
+                    <p>
+                        Garantimos a prestação de contas de todos os
+                        recursos.
+                    </p>
+                </div>
             </div>
         </div>
-    </section>
-    
+    </div>
+</section>
+  
     <!-- Seção de Inscrição -->
     <section id="inscricao" class="inscricao-section">
         <h2 class="inscricao-title">Escolha como Você Vai Fazer a Diferença</h2>
@@ -205,7 +324,7 @@
     <section id="galeria" class="gallery-section">
         <p class="section-eyebrow">Nossa energia em quadra</p>
         <h2 class="section-title">Galeria VidAtiva</h2>
-        <p class="gallery-subtitle">Momentos de inclusão, esporte e superação compartilhados pelo Instituto.</p>
+        <p class="gallery-subtitle">Momentos de inclusão, esporte e superação compartilhados por nós.</p>
 
         <div class="gallery-grid">
             <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/Da6U0GAPgLz/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/reel/Da6U0GAPgLz/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
@@ -215,8 +334,12 @@
             <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DKncbaRyTL5/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/reel/DKncbaRyTL5/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
             <article class="gallery-card"><iframe class="gallery-item" title="Publicação do Instituto VidAtiva" src="https://www.instagram.com/reel/DSGkSNdjZoG/embed/" loading="lazy"></iframe><a href="https://www.instagram.com/reel/DSGkSNdjZoG/" target="_blank" rel="noopener noreferrer">Ver publicação ↗</a></article>
         </div>
-
-        <a class="gallery-link cta-button" href="https://www.instagram.com/institutovidativa/" target="_blank" rel="noopener noreferrer">Ver todas no Instagram</a>
+        
+        <a class="gallery-link cta-button" href="https://www.instagram.com/institutovidativa/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>Ver todas no Instagram</a>
     </section>
 
     <footer class="footer">
