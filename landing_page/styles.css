@@ -342,6 +342,23 @@ html {
     margin-bottom: 25px;
 }
 
+.icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: rgba(255, 107, 0, 0.1); /* Fundo suave em tom laranja */
+  color: var(--primary-blue); /* Cor do ícone */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* ÍCONE LARANJA */
 
 .mvv-icon {
@@ -958,6 +975,11 @@ html {
     50% {
         box-shadow: 0 0 0 10px rgba(255, 140, 0, 0);
     }
+}
+
+.pix-key {
+  user-select: all;
+  -webkit-user-select: all;
 }
 
 .pix-key-row {
